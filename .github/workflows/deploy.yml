@@ -2,8 +2,8 @@ name: Deploy Vite Site to Pages
 
 on:
   push:
-    branches: ["main"] # Executa sempre que houver alteração na main
-  workflow_dispatch:   # Permite rodar manualmente se necessário
+    branches: ["main"]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -21,7 +21,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          # Removido o cache de npm para evitar erro com a ausência do package-lock.json
+          # O cache foi removido para evitar conflitos com a falta do package-lock.json
 
       - name: Install dependencies
         run: npm install
@@ -32,7 +32,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist # Pasta que o Vite gera após o build
+          path: ./dist
 
   deploy:
     environment:

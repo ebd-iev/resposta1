@@ -1,7 +1,9 @@
 import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react"; // Importação necessária
 
 export default defineConfig({
-  base: "/escolabiblica/",
+  plugins: [react()], // Adicione esta linha
+  base: "/ebd-iev/", // Substitua pelo nome EXATO do seu repositório
 
   server: {
     port: 3000,

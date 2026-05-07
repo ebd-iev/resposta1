@@ -1,16 +1,10 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react"; // Importação necessária
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  plugins: [react()], // Adicione esta linha
-  base: "/ebd-iev/", // Substitua pelo nome EXATO do seu repositório
-
-  server: {
-    port: 3000,
-    host: "0.0.0.0",
-    hmr: process.env.DISABLE_HMR !== "true",
-  },
-
+  plugins: [react()],
+  base: "/resposta1/", // Certifique-se de que o nome é o do repositório no GitHub
+  
   build: {
     outDir: "dist",
   },

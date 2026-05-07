@@ -1,6 +1,13 @@
 {
-  "name": "InstaStory Slideshow",
-  "description": "A full-screen, responsive vertical slideshow inspired by Instagram Stories.",
-  "requestFramePermissions": [],
-  "majorCapabilities": []
+  "aulas": [
+    {
+      "id": 1,
+      "titulo": "Introdução à Apologética",
+      "slides": [
+        "img/slide1.jpg",
+        "img/slide2.jpg",
+        "img/slide3.jpg"
+      ]
+    }
+  ]
 }
